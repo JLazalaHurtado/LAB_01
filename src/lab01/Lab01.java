@@ -18,18 +18,20 @@ public class Lab01 {
     public static void main(String[] args) {
 
         Scanner Inicio = new Scanner(System.in);
-        int ds, dm, mes, año, a1, hh, m, m1, Se, s1,h1;
-        string fj;
+        int ds, dm = 0, mes, año, a1, hh1 = 0, m = 0, m1, S = 0, fj = 0, d1;
+        String dsp = null;
 
         System.out.println("Bienvenido, ingresa una fecha en digitos de la siguiente forma: dia de la semana, dia del mes, mes y año");
         System.out.println("Ingresa el dia de la semana");
         ds = Inicio.nextInt();
-
-        if (ds < 1 | ds > 7) {
+        ds++;
+        if (ds < 1 | ds > 8) {
             System.out.println("Dia de la semana no valido. Intenta nuevamente.");
+
         } else {
             System.out.println("Ingresa el dia del mes ");
             dm = Inicio.nextInt();
+            dm++;
             if (dm < 1 | dm > 31) {
                 System.out.println("Dia del mes no valido. Intenta nuevamente. ");
             } else {
@@ -51,8 +53,8 @@ public class Lab01 {
             }
 
             System.out.println("Ingresa la hora en digitos de 2 ");
-            hh = Inicio.nextInt();
-            if (hh < 1 | hh > 12) {
+            hh1 = Inicio.nextInt();
+            if (hh1 < 1 | hh1 > 12) {
                 System.out.println("La hora no es valida. Intenta nuevamente");
             } else {
                 System.out.println("Ingresa los minutos");
@@ -61,29 +63,138 @@ public class Lab01 {
                     System.out.println("Los minutos ingresados no son validos. Intenta nuevamente");
                 } else {
                     System.out.println("Ingresa los segundos");
-                    Se = Inicio.nextInt();
-                    if (Se < 1 | Se > 59) {
+                    S = Inicio.nextInt();
+                    S++;
+                    if (S < 1 | S > 59) {
                         System.out.println("Segundos no validos. Intenta nuevamente ");
-                     }   else {
-                            System.out.println("Ingresar la franja horaria 1. am \tn2. p:m");
-                            fj = Inicio.next();
-                            if ( fj <  1  | fj > 2 ) { 
-                                System.out.println("Franja Horaria no valida. Intenta nuevamente");
-                            }
-                                }
-                    
+                    } else {
+                        System.out.println("Ingresa la franja Horaria seleccionando alguna de las 2 opciones: \t1. a:m ");
+                        System.out.println("\t2. P:m ");
+                        fj = Inicio.nextInt();
+                    }
+
                 }
 
             }
-        }
-        s1 = Se + 1; // la nueva variable para los segundos 
-        
-        if (s1 >60 ) {
-            m1 = m+1 ;
-            if ( m1 > 60) ; 
-            h1 = hh + 1;   // este condicional hace la funcíon de cambiar los minutos y hora con base a los segundos.
+
+            if (S > 59) {
+                m++;
+            }
+            if (m > 59) {
+                hh1++;
+                m = 00;
+                S = 0;  
+            }
+
         }
 
+        switch (ds) {
+            case 1:
+                dsp = "Lunes";
+                break;
+            case 2:
+                dsp = "Martes";
+                break;
+            case 3:
+                dsp = "Miercoles";
+                break;
+            case 4:
+                dsp = "Jueves";
+                break;
+            case 5:
+                dsp = "Viernes";
+                break;
+            case 6:
+                dsp = "Sabado";
+                break;
+            case 7:
+                dsp = "Domingo";
+                break;
+                 case 8:
+                    dsp = "lunes";
+                    break;
+        }
+
+      
+            
+                
+
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
