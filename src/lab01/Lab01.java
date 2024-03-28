@@ -114,8 +114,8 @@ public class Lab01 {
                     dsp = "lunes";
                     break;
         }
-
-      
+   // Este condicional sirve para cambiar el dia de la semana de lunes a martes etc, asimismo cambiar el dia de la semana (dm)
+       
             
                 
 
